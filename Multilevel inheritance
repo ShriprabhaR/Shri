@@ -1,0 +1,98 @@
+// Base class
+
+package com.pack.multilevelinheritance;
+
+public class Flower {
+	
+	String name;
+	String color;
+
+	 public Flower(String name,String color) {
+		        this.name = name;
+		        this.color=color;
+		    }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+}
+
+// Intermediate class
+
+package com.pack.multilevelinheritance;
+
+class Buds extends Flower{
+	
+	String color;
+	String name;
+
+	public Buds(String name, String color) {
+		super(name, color);
+		
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Buds Name=" + getName() + ", Color=" + getColor();
+	}
+}
+
+//Derived class
+
+package com.pack.multilevelinheritance;
+
+class Rose extends Buds{
+	
+	String color;
+	String name;
+
+
+	public Rose(String name,String color) {
+		super(name,color);
+		
+	}
+
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Rose Name)=" + getName() + ", Color=" + getColor();
+	}
+	
+}
