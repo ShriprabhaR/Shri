@@ -1,0 +1,16 @@
+import java.util.stream.Stream;
+
+public class FibonacciStream {
+
+    public static void main(String[] args) {
+        int n = 5; 
+        System.out.println("Fibonacci Series up to " + n + " terms:");
+        fibonacciStream(n).forEach(System.out::println);
+    }
+
+    private static Stream<Integer> fibonacciStream(int n) {
+        return Stream.iterate(new int[]{0, 1}, fib -> new int[]{fib[1], fib[0] + fib[1]})
+                .limit(n)
+                .map(fib -> fib[0]);
+    }
+}
