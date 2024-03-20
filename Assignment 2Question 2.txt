@@ -1,0 +1,73 @@
+2) Define an interface `Resizable` with a method `resize(int percentage)`. Implement this
+interface in classes `Circle` and `Rectangle`. Write a Java program that creates objects of both classes,
+invokes the `resize()` method, and displays the updated dimensions.
+
+interface Resizable {
+    void resize(int percentage);
+}
+
+// Circle class implementing Resizable
+class Circle implements Resizable {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void resize(int percentage) {
+        radius = radius * (1 + percentage / 100.0);
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+}
+
+// Rectangle class implementing Resizable
+class Rectangle implements Resizable {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void resize(int percentage) {
+        width = width * (1 + percentage / 100.0);
+        height = height * (1 + percentage / 100.0);
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+}
+
+// Main program
+public class ResizableProgram {
+    public static void main(String[] args) {
+        // Create objects of Circle and Rectangle
+        Circle circle = new Circle(5.0);
+        Rectangle rectangle = new Rectangle(4.0, 6.0);
+
+        // Display initial dimensions
+        System.out.println("Initial Dimensions:");
+        System.out.println("Circle Radius: " + circle.getRadius());
+        System.out.println("Rectangle Width: " + rectangle.getWidth() + ", Height: " + rectangle.getHeight());
+
+        // Resize objects
+        circle.resize(20);
+        rectangle.resize(-10);
+
+        // Display updated dimensions after resizing
+        System.out.println("\nDimensions after Resizing:");
+        System.out.println("Circle Radius: " + circle.getRadius());
+        System.out.println("Rectangle Width: " + rectangle.getWidth() + ", Height: " + rectangle.getHeight());
+    }
+}
