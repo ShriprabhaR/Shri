@@ -1,0 +1,36 @@
+Question 1: Create an interface named `Drawable` with a method `draw()`. Implement this interface in
+classes `Circle` and `Square`. Write a Java program to create an array of `Drawable` objects and invoke
+the `draw()` method for each object.
+
+//Main program
+public class DrawingProgram {
+    public static void main(String[] args) {
+   
+        Drawable[] drawables = new Drawable[2];
+        drawables[0] = new Circle();
+        drawables[1] = new Square();
+
+        for (Drawable drawable : drawables) {
+            drawable.draw();
+        }
+    }
+}
+
+interface Drawable {
+    void draw();
+}
+
+class Circle implements Drawable {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Circle");
+    }
+}
+
+class Square implements Drawable {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Square");
+    }
+}
+
