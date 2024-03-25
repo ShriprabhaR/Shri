@@ -1,0 +1,63 @@
+.container
+{
+	width:80%;
+	margin:auto;
+}
+.container h1
+{
+	position: relative;
+
+}
+.box-1
+{
+	background: #444444;
+	color: #ffffff;
+	padding: 10px;
+border: 10px red solid;
+border-left:7px red solid;
+border-right: 7px red solid;
+border-top: 15px blue solid;
+border-bottom: 15px blue solid;
+
+	}
+.button
+{
+color:#ffffff;
+}
+.branches
+{
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radiusmargin:15px;
+}
+.block
+{
+	float: left;
+	width: 20.3%;
+	border: 4px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}.clr
+{
+	clear: both;
+}
+.p-box
+{
+	width: 400px;
+	height:500px;
+	border:4px solid #000;
+	margin-top:  30px;
+	position:  relative;
+}
+.p-box h1
+{
+	position: absolute;
+	top: 420px;
+	left: 300px;
+}
+.p-box h2
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
